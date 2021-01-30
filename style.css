@@ -120,3 +120,16 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+/* adding for bonus part */
+#show-successful-massege{
+    margin:200px 300px;
+    width: 30%;
+    background-color: rgb(60, 236, 60);
+    color:white;
+    display: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

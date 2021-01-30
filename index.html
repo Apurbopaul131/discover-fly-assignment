@@ -15,96 +15,167 @@
 
 <body>
     <!--Header and Menu Section-->
-    <header class="container">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a class="active" href="#">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!--Booking Section-->
-    <main class="main-content container">
-        <div class="booking-form">
-            <h3>Booking Flights</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
+    <div id="full-content">
+        <header class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a class="active" href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!--Booking Section-->
+        <main class="main-content container">
+            <div class="booking-form">
+                <h3>Booking Flights</h3>
                 <div class="input-group">
-                    <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
                 </div>
                 <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
                 </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                </div>
+    
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($150)</label>
+    
+                        <input id="first-count" type="number" value="0" name="" id="">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="handleTicketChange('first', true)">+</button>
+                        <button onclick="handleTicketChange('first', false)">-</button>
+                    </div>
+                </div>
+    
+    
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($100)</label>
+    
+                        <input id="economy-count" type="number" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="handleTicketChange('economy', true)">+</button>
+                        <button onclick="handleTicketChange('economy', false)">-</button>
+    
+                    </div>
+                </div>
+    
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p id="price-total">$00</p>
+                        </div>
+                    </div>
+    
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p id="tax-amount">$00</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p id="grand-total">$550</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="buy-btn" class="btn-style">Book Now</button>
             </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p>+ -</p>
-                </div>
+    
+            <div class="booking-content">
+                <h1>discover <br> around the world</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                    veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                    voluptatibus quam</p>
             </div>
-            
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p>$500</p>
-                    </div>
-                </div>
-
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p>$50</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p>$550</p>
-                    </div>
-                </div>
-            </div>
-            <button class="btn-style">Book Now</button>
-        </div>
-
-        <div class="booking-content">
-            <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
-        </div>
-    </section>
+        </main>
+    </div>
+    <!-- Adding for bonus marking -->
+    <footer>
+        <h1 id="show-successful-massege">Buy ticket successfully</h1>
+    </footer>
 
     <!--Thank You-->
+
+    <script>
+        //adding for number of ticket count. .
+        function handleTicketChange(ticket, isIncrease) {
+            const ticketCount = getInputValue(ticket);
+            let ticketNewCount = ticketCount;
+            if (isIncrease == true) {
+                ticketNewCount = ticketCount + 1;
+            }
+            if (isIncrease == false && ticketCount > 0) {
+                ticketNewCount = ticketCount - 1;
+            }
+            document.getElementById(ticket + '-count').value =ticketNewCount;
+            let ticketTotal = 0;
+            if (ticket == 'first') {
+                ticketTotal = ticketNewCount * 150;
+            }
+            if (ticket == 'economy') {
+                ticketTotal = ticketNewCount * 100;
+            }
+
+            calculateTotal();
+        }
+        
+        //Adding for total ticket price calculation
+        function calculateTotal() {
+            const firstClassCount = getInputValue('first');
+            const economyCount = getInputValue('economy');
+
+            const totalPrice = firstClassCount * 150 + economyCount * 100;
+            document.getElementById('price-total').innerText = '$' + totalPrice;
+
+            const tax = Math.round(totalPrice * 0.1);
+            document.getElementById('tax-amount').innerText = '$' + tax;
+
+            const grandTotal = totalPrice + tax;
+            document.getElementById('grand-total').innerText = '$' + grandTotal;
+        }
+
+        //get input value area.
+        function getInputValue(ticket) {
+            const ticketInput = document.getElementById(ticket + '-count');
+            const ticketCount = parseInt(ticketInput.value);
+            return ticketCount;
+        }
+        // Adding for Bonus marking that show a conformation massage after click "buy now" button
+        const successfulMassage = document.getElementById("buy-btn");
+        successfulMassage.addEventListener("click",function(){
+            
+            const fullContent = document.getElementById("full-content");
+            fullContent.style.display = 'none';
+            document.getElementById("show-successful-massege").style.display = "block";
+            
+        })
+    </script>
 </body>
 
 </html>
